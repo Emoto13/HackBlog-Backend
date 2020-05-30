@@ -28,7 +28,3 @@ class OpinionBlogListViewSet(viewsets.ModelViewSet):
 class OtherBlogListViewSet(viewsets.ModelViewSet):
     queryset = OtherBlog.objects.all()
     serializer_class = OtherBlogSerializer
-
-
-def render_blogs_template(request):
-    return
