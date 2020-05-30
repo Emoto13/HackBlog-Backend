@@ -9,8 +9,8 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     date = models.DateField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     image = models.ImageField(null=True)
+    author_name = models.CharField(max_length=50, default='Unknown')
 
     def __str__(self):
         return f"{self.title}  - {self.content[:50]}... "
