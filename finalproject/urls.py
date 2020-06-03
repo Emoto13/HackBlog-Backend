@@ -20,6 +20,7 @@ from rest_framework import routers
 from blogs.views import PoliticsBlogListViewSet, SportBlogListViewSet,\
     TechBlogListViewSet, OpinionBlogListViewSet, OtherBlogListViewSet
 from finalproject import settings
+from comment.views import CommentViewSet
 
 router = routers.DefaultRouter()
 router.register('politics', PoliticsBlogListViewSet)
@@ -27,6 +28,7 @@ router.register('sport', SportBlogListViewSet)
 router.register('tech', TechBlogListViewSet)
 router.register('opinion', OpinionBlogListViewSet)
 router.register('other', OtherBlogListViewSet)
+router.register('comments', CommentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
