@@ -6,28 +6,28 @@ from blogs.models import PoliticsBlog, SportBlog, TechBlog, OpinionBlog, OtherBl
 class PoliticsBlogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PoliticsBlog
-        fields = ['id', 'title', 'content', 'date', 'image', 'author_name']
+        fields = ['id', 'title', 'content', 'date', 'image', 'author_name', 'comment_set']
 
 
 class SportBlogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = SportBlog
-        fields = ['id', 'title', 'content', 'date', 'image', 'author_name']
+        fields = ['id', 'title', 'content', 'date', 'image', 'author_name', 'comment_set']
 
 
 class TechBlogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = OpinionBlog
-        fields = ['id', 'title', 'content', 'date', 'image', 'author_name']
+        fields = ['id', 'title', 'content', 'date', 'image', 'author_name', 'comment_set']
 
 
 class OpinionBlogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = TechBlog
-        fields = ['id', 'title', 'content', 'date', 'image', 'author_name']
+        fields = ['id', 'title', 'content', 'date', 'image', 'author_name', 'comment_set']
 
 
 class OtherBlogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = OtherBlog
-        fields = ['id', 'title', 'content', 'date', 'image', 'author_name']
+        fields = ['id', 'title', 'content', 'date', 'image', 'author_name', 'comment_set']
