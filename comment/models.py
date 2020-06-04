@@ -4,7 +4,7 @@ from blogs.models import Blog
 
 
 class Comment(models.Model):
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+
     publisher = models.CharField(max_length=50)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
