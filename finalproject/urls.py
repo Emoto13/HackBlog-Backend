@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 from blogs.views import PoliticsBlogListViewSet, SportBlogListViewSet,\
-    TechBlogListViewSet, OpinionBlogListViewSet, OtherBlogListViewSet
+    TechBlogListViewSet, OpinionBlogListViewSet, OtherBlogListViewSet, SportBlogCreate
 from finalproject import settings
 from comment.views import CommentViewSet
 
@@ -32,6 +32,7 @@ router.register('comments', CommentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('sport/create', SportBlogCreate.as_view(), name='sport-post'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
