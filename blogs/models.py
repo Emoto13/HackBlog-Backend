@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -15,7 +14,7 @@ class Blog(models.Model):
         return f"{self.title}  - {self.content[:50]}... "
 
     class Meta:
-        ordering = ['-date', 'title']
+        ordering = ['-date', '-id']
 
 
 class PoliticsBlog(Blog):
